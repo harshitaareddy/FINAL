@@ -1,4 +1,5 @@
-@extends('layouts.app')
+sudo apt-get install php-sqlite3
+touch database/database.sqlite@extends('layouts.app')
 
 @section('content')
     <div class="container">
