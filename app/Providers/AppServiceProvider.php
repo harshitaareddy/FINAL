@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
         //
         Blade::directive('tagify', function ($expression) {
 
-            $expression =  "preg_replace(\"/(?:^|\s)#(\w+)/\", \" <a href='tag/$1'>#$1</a>\", $expression)";
+            $expression =  "preg_replace(\"/(?:^|\s)#(\w+)/\", \" <a href='/tag/$1'>#$1</a>\", $expression)";
             return "<?php echo {$expression}; ?>";
 
         });

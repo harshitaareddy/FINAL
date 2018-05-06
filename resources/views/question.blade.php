@@ -9,7 +9,7 @@
 
                     <div class="card-body">
 
-                        {{$question->body}}
+                        @tagify($question->body)
                     </div>
                     <div class="card-footer">
                         <a class="btn btn-primary float-right"
