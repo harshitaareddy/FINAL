@@ -11,6 +11,12 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
+                            @if ($errors->has('register_honey'))
+                                <div class="alert alert-danger text-center">
+                                    <strong>{{ $errors->first('register_honey') }}</strong>
+                                </div>
+                            @endif
+
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -46,6 +52,8 @@
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                                 </div>
                             </div>
+
+                            {!! App\Classes\Honeypot::generate('register_honey') !!}
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">

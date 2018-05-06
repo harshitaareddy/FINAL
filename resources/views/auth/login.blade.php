@@ -6,10 +6,16 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __('Login') }}</div>
-
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
+
+                            @if ($errors->has('login_honey'))
+                                <div class="alert alert-danger text-center">
+                                    <strong>{{ $errors->first('login_honey') }}</strong>
+                                </div>
+                            @endif
+
 
                             <div class="form-group row">
                                 <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -48,6 +54,8 @@
                                     </div>
                                 </div>
                             </div>
+                            {!! App\Classes\Honeypot::generate('login_honey') !!}
+
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
