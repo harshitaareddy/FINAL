@@ -114,6 +114,15 @@ class QuestionController extends Controller
 
         return redirect()->route('questions.show',['question_id' => $question->id])->with('message', 'Saved');
     }
+    public function tag($tag)
+    {
+        $user = Auth::user();
+        #search for queation with $tag
+        $questions = $user->questions()->where('body','like',"%#$tag%")->paginate(6);
+        // $questions = Question::where('body','like',"%#$tag%")->get();
+        return view('home')->with('questions', $questions);
+        // return $questions;
+    }
 
     /**
      * Remove the specified resource from storage.
