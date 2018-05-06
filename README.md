@@ -1,8 +1,17 @@
 # faq final project
 
-To run the FAQ project:
+The user stories are as follows : 
 
-1. creating honeypot class to generate honeypot fields
-2. CD into FAQ and run composer install
-3. cp .env.example to .env
-4. setup database/sqlite or other.
+1. As a user i want to access a spam free website.                                       
+2.  As a user i want to register,login and create profile and access the website.
+3.  As a user i want to add questions and hashtag the keywords to form links.
+4. As a user i want to click on that hashtag to redirect me to the questions page.
+5. As a developer i want to create a  honeypot class to generate honeypot fields.
+6. As a developer i want to add honeypot field and validate message to login and register form.
+7. As a developer i want to create blade custom directive for replacing hash tag with link.
+8. As a developer i want to replace the hashtag with link on the view questions page.
+
+
+EPIC
+
+Spam tracking the login and register page by adding honeypot fields to it and also adding hash tags to the questions body and adding links to them to redirect those links  to the questions page.
