@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use Blade;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -14,6 +14,15 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        Blade::directive('tagify', function ($expression) {
+
+            $expression =  "preg_replace(\"/(?:^|\s)#(\w+)/\", \" <a href='tag/$1'>#$1</a>\", $expression)";
+            return "<?php echo {$expression}; ?>";
+
+        });
+        Blade::directive('hello', function ($expression) {
+            return "<?php echo 'Hello ' . {$expression}; ?>";
+        });
     }
 
     /**
