@@ -27,6 +27,18 @@
 
             <div class="col-md-4">
                 <div class="card">
+                    <div class="card-header">Hastags</div>
+                    <div class="card-body">
+                        <ul class="list-inline">
+                            @foreach ($question->hashtags as $hashtag)
+                                <li class="list-inline-item">
+                                    <a class="label label-primary" href="/tag/{{$hashtag}}">{{$hashtag}}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
                     <div class="card-header"><a class="btn btn-primary float-left"
                                                 href="{{ route('answers.create', ['question_id'=> $question->id])}}">
                             Answer Question

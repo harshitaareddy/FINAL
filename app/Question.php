@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     protected $fillable = ['body'];
+    protected $appends = array('hashtags');
+
+    public function getHashtagsAttribute()
+    {
+        /* Match hashtags */
+        $matches = [];
+        preg_match_all('/#(\w+)/', $this->body, $matches);
+        return $matches[1];
+    }
 
     public function user()
     {

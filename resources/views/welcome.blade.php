@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Final Project</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -13,8 +13,8 @@
     <!-- Styles -->
     <style>
         html, body {
-            background-color: #fff;
-            color: #636b6f;
+            background-color: #f5c6cb;
+            color: #e83e8c;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
             height: 100vh;
@@ -37,7 +37,7 @@
 
         .top-right {
             position: absolute;
-            right: 10px;
+            right: 15px;
             top: 18px;
         }
 
@@ -46,13 +46,13 @@
         }
 
         .title {
-            font-size: 84px;
+            font-size: 87px;
         }
 
         .links > a {
             color: #636b6f;
             padding: 0 25px;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 600;
             letter-spacing: .1rem;
             text-decoration: none;
@@ -79,14 +79,14 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Laravel
+            Final Project
         </div>
 
         <div class="links">
-            <a href="https://laravel.com/docs">Documentation</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://forge.laravel.com">Forge</a>
+            <a href="https://laravel.com/docs">Blade Directives</a>
+            <a href="https://laracasts.com">Honey Pot</a>
+            <a href="https://laravel-news.com">User Stories</a>
+            <a href="https://forge.laravel.com">Hash Tags</a>
             <a href="https://github.com/laravel/laravel">GitHub</a>
         </div>
     </div>
