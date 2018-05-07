@@ -21,4 +21,9 @@ class QuestionTest extends TestCase
         $question->user()->associate($user);
         $this->assertTrue($question->save());
     }
+    public function testDelete()
+    {
+        $question = factory(\App\Question::class)->make();
+        $this->assertFalse(is_object($question->delete()));
+    }
 }

@@ -35,4 +35,25 @@ class UserTest extends TestCase
         $user = factory(\App\User::class)->make();
         $this->assertTrue(is_object($user->profile()->get()));
     }
+    public function testDelete()
+    {
+        $user = factory(\App\User::class)->make();
+
+        $profile = factory(\App\Profile::class)->make();
+        $profile->user()->associate($user);
+
+        $question = factory(\App\Question::class)->make();
+        $question->user()->associate($user);
+
+
+        $answer = factory(\App\Answer::class)->make();
+        $answer->user()->associate($user);
+        $answer->question()->associate($question);
+
+        $this->assertFalse(is_object($user->delete()));
+        $this->assertFalse(is_object($profile->delete()));
+        $this->assertFalse(is_object($question->delete()));
+        $this->assertFalse(is_object($answer->delete()));
+
+    }
 }

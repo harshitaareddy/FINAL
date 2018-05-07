@@ -22,4 +22,11 @@ class profileTest extends TestCase
         $profile->user()->associate($user);
         $this->assertTrue($profile->save());
     }
+    public function testDelete()
+    {
+        $user = factory(\App\User::class)->make();
+        $profile = factory(\App\Profile::class)->make();
+        $profile->user()->associate($user);
+        $this->assertFalse(is_object($profile->delete()));
+    }
 }
