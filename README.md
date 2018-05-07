@@ -9,6 +9,8 @@ The user stories are as follows :
 
 
 The developer stories are  as follows:
+
+
 5. As a developer i want to create a  honeypot class to generate honeypot fields.
 6. As a developer i want to add honeypot field and validate message to login and register form.
 7. As a developer i want to create blade custom directive for replacing hash tag with link.
